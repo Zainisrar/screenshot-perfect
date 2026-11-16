@@ -70,42 +70,53 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.375rem;
+  --background: oklch(0.985 0.006 150);
+  --foreground: oklch(0.22 0.03 157);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.22 0.03 157);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.22 0.03 157);
+  --primary: oklch(0.38 0.09 153);
+  --primary-foreground: oklch(0.99 0.004 150);
+  --secondary: oklch(0.95 0.025 150);
+  --secondary-foreground: oklch(0.31 0.055 153);
+  --muted: oklch(0.955 0.008 150);
+  --muted-foreground: oklch(0.52 0.025 157);
+  --accent: oklch(0.93 0.045 148);
+  --accent-foreground: oklch(0.28 0.055 153);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.9 0.012 153);
+  --input: oklch(0.9 0.012 153);
+  --ring: oklch(0.52 0.1 153);
+  --chart-1: oklch(0.48 0.12 153);
+  --chart-2: oklch(0.66 0.12 193);
+  --chart-3: oklch(0.7 0.15 72);
+  --chart-4: oklch(0.59 0.15 25);
+  --chart-5: oklch(0.62 0.13 286);
+  --sidebar: oklch(0.24 0.045 157);
+  --sidebar-foreground: oklch(0.96 0.012 150);
+  --sidebar-primary: oklch(0.76 0.14 151);
+  --sidebar-primary-foreground: oklch(0.2 0.04 157);
+  --sidebar-accent: oklch(0.31 0.055 157);
+  --sidebar-accent-foreground: oklch(0.96 0.012 150);
+  --sidebar-border: oklch(0.36 0.04 157);
+  --sidebar-ring: oklch(0.68 0.1 153);
+  --status-green: oklch(0.48 0.12 153);
+  --status-green-soft: oklch(0.94 0.045 151);
+  --status-amber: oklch(0.56 0.13 72);
+  --status-amber-soft: oklch(0.96 0.055 82);
+  --status-red: oklch(0.53 0.18 25);
+  --status-red-soft: oklch(0.95 0.035 25);
+  --status-blue: oklch(0.51 0.1 235);
+  --status-blue-soft: oklch(0.95 0.03 235);
+  --sidebar-muted: oklch(0.77 0.025 157);
 }
 
 .dark {
@@ -141,6 +152,21 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@utility text-status-green { color: var(--status-green); }
+@utility bg-status-green-soft { background-color: var(--status-green-soft); }
+@utility text-status-amber { color: var(--status-amber); }
+@utility bg-status-amber-soft { background-color: var(--status-amber-soft); }
+@utility text-status-red { color: var(--status-red); }
+@utility bg-status-red-soft { background-color: var(--status-red-soft); }
+@utility text-status-blue { color: var(--status-blue); }
+@utility bg-status-blue-soft { background-color: var(--status-blue-soft); }
+@utility text-sidebar-muted { color: var(--sidebar-muted); }
+
+@layer base {
+  body { font-family: var(--font-sans); }
+  h1, h2, h3, h4 { font-family: var(--font-display); }
 }
 
 @layer base {

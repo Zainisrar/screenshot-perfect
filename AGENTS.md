@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project implementation rules
+
+- Keep TEA as a frontend-only demo: mock records and in-memory service functions are the sole data layer because the production backend is owned separately.
